@@ -16,11 +16,11 @@ html
 
       div(class="collapse navbar-collapse" id="navbarNav")
         ul(class="navbar-nav")
-          li(class="nav-item")
+          li(class="nav-item" + (title == 'Home' ? ' active' : ''))
             a(href='/' class="nav-link") Home
-          li(class="nav-item")
+          li(class="nav-item" + (title == 'Presentations' ? ' active' : ''))
             a(href='/pres' class="nav-link") Presentations
-          li(class="nav-item")
+          li(class="nav-item" + (title == 'List of songs' ? ' active' : ''))
             a(href='/list' class="nav-link") List of songs
   
     div(class="container")
