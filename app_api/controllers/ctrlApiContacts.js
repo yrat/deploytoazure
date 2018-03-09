@@ -12,9 +12,11 @@ const getContacts = function (req, res) {
 }
 
 const addContact = function (req, res) {
-    contactsModel.create(req.body, function(err, newContact) {
+    let body = req.body;
+    body['created'] = new Date();
+    contactsModel.create(body, function(err, newContact) {
         if (err)
-            res.status(404).json(err);
+            res.status(400).json(err);
         else
             res.status(201).json(newContact);
     });
