@@ -1,15 +1,18 @@
 const mongoose = require('mongoose');
 
-const singers = new mongoose.Schema({
+const singersSchema = new mongoose.Schema({
     firstname:String,
     lastname:String,
     description:String,
     songs:[{title:String, year:Number}]});
 
-const contacts = new mongoose.Schema({
+const contactsSchema = new mongoose.Schema({
     firstname:String,
     lastname:String,
     subject:String,
     message:String,
     created:Date
 });
+
+mongoose.model('singers', singersSchema, 'singers');
+mongoose.model('contacts', contactsSchema, 'contacts');
