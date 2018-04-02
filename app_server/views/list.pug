@@ -1,18 +1,11 @@
 extends layout
 
 block content
-  h1= title
+  h1 List of songs
   p These are some of their most popular songs
 
-  h2 Jacques Brel
-  ul
-   li Ne me quitte pas
-   li Amsterdam
-   li Ces gens là
-
-  h2 France Gall
-  ul
-   li Poupée de cire
-   li Les idoles
-   li Résiste
-
+  each singer in singers
+    h2=singer.firstname + " " + singer.lastname
+    ul
+      each song in singer.songs
+        li=song.title

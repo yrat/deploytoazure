@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const singersSchema = new mongoose.Schema({
     firstname:String,
     lastname:String,
+    avatar:String,
     description:String,
     songs:[{title:String, year:Number}]});
 

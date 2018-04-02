@@ -1,13 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-const ctrlMain = require('../controllers/ctrlMain');
-const ctrlPres = require('../controllers/ctrlPres');
-const ctrlList = require('../controllers/ctrlList');
+const ctrlSingers = require('../controllers/ctrlSingers');
 
 /* GET home page. */
-router.get('/', ctrlMain.index);
-router.get('/pres', ctrlPres.index);
-router.get('/list', ctrlList.index);
+router.get('/', ctrlSingers.index);
+router.get('/pres', ctrlSingers.pres);
+router.get('/list', ctrlSingers.list);
 
 module.exports = router;
