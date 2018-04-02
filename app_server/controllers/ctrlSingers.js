@@ -37,6 +37,7 @@ const pres = function(req, res) {
 }
 
 const index = function(req, res) {
+	res.render('index');
 }
 
 module.exports = {
