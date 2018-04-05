@@ -7,5 +7,7 @@ const ctrlSingers = require('../controllers/ctrlSingers');
 router.get('/', ctrlSingers.index);
 router.get('/pres', ctrlSingers.pres);
 router.get('/list', ctrlSingers.list);
+router.get('/addSinger', ctrlSingers.getAddSinger);
+router.post('/addSinger', ctrlSingers.postAddSinger);
 
 module.exports = router;

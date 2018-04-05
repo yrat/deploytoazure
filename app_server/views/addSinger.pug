@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 Add a singer
+    form(action="" method="post")
+        div(class="form-group")
+            input(type="text" name="firstname" placeholder="firstname" class="form-control")
+        div(class="form-group")
+            input(type="text" name="lastname" placeholder="lastname" class="form-control")
+        div(class="form-group")
+            input(type="text" name="avatar" placeholder="singer web image link" class="form-control")
+        div(class="form-group")
+            textarea(type="text" name="description" placeholder="description" class="form-control")
+        div(class="form-group")
+            input(type="text" name="songTitle" placeholder="most popular song title" class="form-control")
+        div(class="form-group")
+            input(type="text" name="songYear" placeholder="year of the song" class="form-control")
+        button(type="submit" title="add" class="btn btn-primary") Add
